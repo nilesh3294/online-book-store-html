@@ -2,34 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Seller Account</title>
+    <title>Online Book Store</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>📚 Seller Account</h1>
+        <h1>📚 Online Book Store</h1>
     </header>
 
-    <section class="login-section">
-        <h2>Login</h2>
-        <input type="text" id="sellerName" placeholder="Enter Seller Name">
-        <button onclick="loginSeller()">Login</button>
+    <!-- Table for quick book list -->
+    <table border="1">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>C# Programming</td>
+            <td>John Smith</td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>ASP.NET Core Guide</td>
+            <td>David Miller</td>
+            <td>650</td>
+        </tr>
+        <tr>
+            <td>Web Development</td>
+            <td>Robert Brown</td>
+            <td>450</td>
+        </tr>
+    </table>
+
+    <!-- Modern Book Cards -->
+    <section class="book-list">
+        <div class="book" data-price="500">
+            <h3>C# Programming</h3>
+            <p>Author: John Smith</p>
+            <p>Price: ₹500</p>
+            <button onclick="buyBook(this)">Buy</button>
+        </div>
+
+        <div class="book" data-price="650">
+            <h3>ASP.NET Core Guide</h3>
+            <p>Author: David Miller</p>
+            <p>Price: ₹650</p>
+            <button onclick="buyBook(this)">Buy</button>
+        </div>
+
+        <div class="book" data-price="450">
+            <h3>Web Development</h3>
+            <p>Author: Robert Brown</p>
+            <p>Price: ₹450</p>
+            <button onclick="buyBook(this)">Buy</button>
+        </div>
     </section>
 
-    <section id="profileSection" class="hidden">
-        <h2>Welcome, <span id="sellerDisplayName"></span>!</h2>
-        <h3>Your Profile</h3>
-        <p>Seller Name: <span id="sellerProfileName"></span></p>
-
-        <h3>Add Book</h3>
-        <input type="text" id="bookTitle" placeholder="Book Title">
-        <input type="text" id="bookAuthor" placeholder="Author">
-        <input type="number" id="bookPrice" placeholder="Price">
-        <button onclick="addBook()">Add Book</button>
-
-        <h3>Your Books</h3>
-        <ul id="sellerBooksList"></ul>
-    </section>
+    <footer>
+        <p>Total Amount: ₹<span id="total">0</span></p>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
