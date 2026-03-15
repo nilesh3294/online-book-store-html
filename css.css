@@ -52,3 +52,15 @@ footer {
     margin: 20px;
     font-size: 18px;
 }
+.hidden { display: none; }
+
+.login-section input, .login-section button,
+#profileSection input, #profileSection button {
+    padding: 8px;
+    margin: 5px;
+}
+
+#profileSection ul {
+    list-style: none;
+    padding-left: 0;
+}
