@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seller Account</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>📚 Seller Account</h1>
+    </header>
+
+    <section class="login-section">
+        <h2>Login</h2>
+        <input type="text" id="sellerName" placeholder="Enter Seller Name">
+        <button onclick="loginSeller()">Login</button>
+    </section>
+
+    <section id="profileSection" class="hidden">
+        <h2>Welcome, <span id="sellerDisplayName"></span>!</h2>
+        <h3>Your Profile</h3>
+        <p>Seller Name: <span id="sellerProfileName"></span></p>
+
+        <h3>Add Book</h3>
+        <input type="text" id="bookTitle" placeholder="Book Title">
+        <input type="text" id="bookAuthor" placeholder="Author">
+        <input type="number" id="bookPrice" placeholder="Price">
+        <button onclick="addBook()">Add Book</button>
+
+        <h3>Your Books</h3>
+        <ul id="sellerBooksList"></ul>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
